@@ -26,7 +26,6 @@ class Box {
             strokeWeight(4);
             rect(0, 0, this.width, this.height);
             image(this.image,-25,-27,this.width,this.height);
-            score = score+1;
             pop();
         } 
         if (this.body.speed >15) {
@@ -34,7 +33,7 @@ class Box {
             World.remove(world, this.body);
             this.visibility = this.visibility - 1;
             tint(255, this.visibility);
-            //score = score+1;
+            score = score+1;
             pop();
         }
     }
